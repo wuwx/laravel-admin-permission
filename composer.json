@@ -1,0 +1,34 @@
+{
+    "name": "wuwx/laravel-admin-permission",
+    "description": "description...",
+    "type": "library",
+    "keywords": ["laravel-admin", "extension"],
+    "homepage": "https://github.com/wuwx/laravel-admin-permission",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "wuwx",
+            "email": "wuweixin@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0",
+        "encore/laravel-admin": "^2.0",
+        "spatie/laravel-permission": "^3.18"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Wuwx\\LaravelAdminPermission\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Wuwx\\LaravelAdminPermission\\PermissionServiceProvider"
+            ]
+        }
+    }
+}
