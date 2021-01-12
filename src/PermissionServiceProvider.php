@@ -21,6 +21,10 @@ class PermissionServiceProvider extends ServiceProvider
             $this->loadViewsFrom($views, 'laravel-admin-permission');
         }
 
+        if ($this->app->runningInConsole() && $migrations = $extension->migrations()) {
+            $this->loadMigrationsFrom($migrations);
+        }
+
         if ($this->app->runningInConsole() && $assets = $extension->assets()) {
             $this->publishes(
                 [$assets => public_path('vendor/wuwx/laravel-admin-permission')],
